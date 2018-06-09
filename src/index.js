@@ -14,7 +14,13 @@ const appState = observable({
   }),
   decCounter: action("Decrement Counter", () => {
     appState.count = appState.count - 1;
-  })
+  }),
+  get countByThree() {
+    return this.count * 3;
+  },
+  get countByFour() {
+    return this.count * 4;
+  }
 });
 
 const Counter = observer(props => (
@@ -24,6 +30,9 @@ const Counter = observer(props => (
       <button onClick={props.appState.incCounter}>Add</button>
       <button onClick={props.appState.decCounter}>Dec</button>
     </div>
+
+    <div>Count by Three {props.appState.countByThree}</div>
+    <div>Count by Four {props.appState.countByFour}</div>
 
     <DevTools />
   </section>
