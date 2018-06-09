@@ -1,0 +1,27 @@
+{
+  "name": "mobx-react",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "cross-env": "^5.1.6",
+    "express": "^4.16.3",
+    "forever": "^0.15.3",
+    "mobx": "^4.3.0",
+    "mobx-react": "^5.1.2",
+    "mobx-react-devtools": "^5.0.1",
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0",
+    "react-scripts": "1.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "postbuild": "react-snap",
+    "prod-server": "cross-env NODE_ENV=production node server.js"
+  },
+  "devDependencies": {
+    "react-snap": "^1.13.0"
+  }
+}
